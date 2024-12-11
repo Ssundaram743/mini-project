@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+    
+    <!-- Form to Add Student -->
+    <div id="add-student">
+      <h3>Add Student</h3>
+      <input type="text" id="first-name" placeholder="First Name">
+      <input type="text" id="last-name" placeholder="Last Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="phone" placeholder="Phone">
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <!-- List of Students -->
+    <div id="student-list">
+      <h3>Student List</h3>
+
+      <!-- Search Bar Positioned in the Top Right -->
+      <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Search by Name or Email">
+        <button onclick="searchStudent()">Search</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="students">
+          <!-- Students will be listed here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

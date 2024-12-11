@@ -1,0 +1,201 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  background-image: url('https://cdn.pixabay.com/photo/2021/10/11/04/08/university-6699377_1280.jpg'); /* Correct relative path */
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight transparency to allow background image to show through */
+  border-radius: 8px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+/* Form Styling */
+#add-student {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#add-student h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #4a90e2;
+}
+
+#add-student input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+#add-student input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* Smaller Add Student Button */
+#add-student button {
+  width: auto;
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-student button:hover {
+  background-color: #357ab7;
+}
+
+/* Student List Table Styling */
+#student-list {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* To position the search bar inside this container */
+}
+
+#student-list h3 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.1em;
+}
+
+table td {
+  font-size: 1em;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+button.delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Search Bar Styling (Positioned at the top-right corner) */
+#search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#search-bar input {
+  padding: 8px;
+  font-size: 1em;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#search-bar button {
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#search-bar button:hover {
+  background-color: #357ab7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  #add-student input, #add-student button {
+    width: 100%;
+  }
+
+  table th, table td {
+    padding: 8px;
+  }
+
+  #add-student button {
+    font-size: 1em;
+  }
+
+  #search-bar {
+    top: 10px;
+    right: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  #search-bar input {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  #search-bar button {
+    width: 50%;
+  }
+}
