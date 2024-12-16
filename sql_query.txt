@@ -1,0 +1,27 @@
+CREATE TABLE students (
+    student_id NUMBER PRIMARY KEY,
+    first_name VARCHAR2(100),
+    last_name VARCHAR2(100),
+    email VARCHAR2(100) CHECK (email LIKE '%@gmail.com' OR email LIKE '%@yahoo.com'),
+    phone number(10),
+    enrolled_date DATE
+);
+
+
+create SEQUENCE student_id_seq
+START WITH 100001 -- Starting value
+INCREMENT BY 1 -- Increment value
+NOCACHE -- Optionally, avoid caching sequence numbers (default is 20);
+
+
+CREATE OR REPLACE TRIGGER student_id_trigger
+BEFORE INSERT ON students
+FOR EACH ROW
+BEGIN
+    -- Automatically assign the next value from the sequence to student_id
+    IF :NEW.student_id IS NULL THEN
+        SELECT student_id_seq.NEXTVAL
+        INTO :NEW.student_id
+        FROM dual;
+    END IF;
+END;
